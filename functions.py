@@ -9,3 +9,7 @@ def sigmoid(x):
 
 def relu(x):
     return np.maximum(0, x)
+
+def softmax(x):
+    x = x - np.max(x)
+    return np.exp(x) / np.sum(np.exp(x))
